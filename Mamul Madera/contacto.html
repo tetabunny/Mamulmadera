@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./Css/contacto.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logosint">
+        <a href="/Mamul%20Madera/index.html"
+          ><img
+            src="./Img/Captura_de_pantalla_2024-08-09_a_la_s__15.05.52-removebg 2.svg"
+            alt="logo mamul"
+        /></a>
+      </div>
+      <nav class="nav">
+        <ul class="navbar">
+          <li><a href="/Mamul%20Madera/index.html">Inicio</a></li>
+          <li>
+            <h1>Productos</h1>
+            <ol class="submenu">
+              <li><a href="./muebles.html"> Muebles </a></li>
+              <li><a href="./lamparas.html"> Lámparas </a></li>
+              <li><a href="./cocina.html"> Cocina </a></li>
+            </ol>
+          </li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          &#9776;
+          <!-- Este es el símbolo del menú hamburguesa -->
+        </div>
+      </nav>
+    </header>
+
+    <script src="./js/scripts.js"></script>
+
+    <section>
+      <h3>Formulario de contacto</h3>
+      <form id="form" action="formularioenvi.html">
+        <fieldset>
+          <legend>Información Personal</legend>
+          <div>
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Juan Perez"
+              required
+            />
+          </div>
+          <div>
+            <label for="name">E-mail</label>
+            <input
+              type="email"
+              id="name"
+              name="name"
+              placeholder="juanperez90@gmail.com"
+              required
+            />
+          </div>
+          <div>
+            <label for="name">Teléfono</label>
+            <input
+              type="tel"
+              id="name"
+              name="name"
+              placeholder="1167890123"
+              required
+            />
+          </div>
+          <div>
+            <label for="name">Mensaje</label>
+            <textarea
+              id="w3review"
+              name="w3review"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </div>
+        </fieldset>
+        <input type="submit" />
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-column">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/mamul________/"
+            ><img
+              src="https://cdn.glitch.global/d8f48f09-9b84-4c87-8f17-977ec9800f73/ig?v=1731961578325"
+              alt="Instagram Logo"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://cdn.glitch.global/d8f48f09-9b84-4c87-8f17-977ec9800f73/wpp?v=1731961312537"
+              alt="WhatsApp Logo"
+          /></a>
+        </div>
+        <p>pedro.karszenbaum@gmail.com</p>
+        <p>
+          Creado por @portfolio.debuono @portfoliogarbarini @portfolio.a.nunez
+        </p>
+        <p>Copyright @mamul________ - 2024. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        Swal.fire({
+          title: "¡Formulario envíado con éxito!",
+          icon: "success",
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sen:wght@400..800&display=swap");
+
+body {
+    background-color: #eeeae1;
+    margin: 10px;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logosint {
+    height: 75px;
+    width: 50px;
+    display: flex;
+}
+
+h1 {
+    color: inherit;
+    font-family: "sen", sans-serif;
+    font-size: 15px;
+    font-weight:inherit;
+}
+
+.nav a {
+    color: #5c3c25;
+    font-family: "Sen", sans-serif;
+    text-decoration: none;
+}
+.navbar {
+    list-style-type: none; /* Quita las viÃ±etas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Elimina la decoraciÃ³n de los enlaces */
+.navbar a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Usa el color del texto del contenedor */
+    padding: 10px;
+    display: block; /* Para que los enlaces ocupen todo el espacio del li */
+}
+
+/* Estilo del submenÃº */
+.submenu {
+    list-style-type: none; /* Quita las viÃ±etas */
+    margin: 0;
+    padding: 0;
+    background: #f9ebc7;
+    position: absolute;
+    display: none; /* Oculta el submenÃº por defecto */
+}
+
+/* Muestra el submenÃº al hacer hover */
+.navbar li:hover .submenu {
+    display: block;
+}
+
+/* Estilos adicionales para la barra */
+.navbar li {
+    display: inline-block; /* Hace que los elementos de la lista estÃ©n en lÃ­nea */
+    position: relative;
+}
+
+.submenu li {
+    display: block; /* Para que los elementos del submenÃº estÃ©n en bloque */
+}
+
+.hamburger {
+    display: none;
+    font-size: 50px;
+    color: #5c3c25;
+    cursor: pointer;
+}
+
+.logo {
+    height: 150px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-family: "nunito sans", sans-serif;
+    color: #5c3c25;
+}
+
+h2 {
+    font-family: "nunito sans", sans-serif;
+}
+
+legend {
+    font-family: "nunito sans", sans-serif;
+    font-weight: bold;
+    color: #9b6f53;
+}
+
+fieldset div {
+    margin: 20px 0;
+}
+
+fieldset {
+    border: dotted #c4661f; /* Color del borde, con un grosor de 2 pÃ­xeles y estilo sÃ³lido */
+    border-radius: 8px; /* Radio de las esquinas redondeadas */
+}
+
+fieldset label {
+    font-family: "sen", sans-serif;
+    color: #9b6f53;
+}
+
+p {
+    font-family: "Sen", sans-serif;
+}
+
+input[type="submit"] {
+    font-family: "nunito sans", sans-serif;
+    background-color: #9b6f53;
+    color: #eeeae1;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+    margin: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #c4661f;
+    transform: scale(1.05);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-family: "Sen", sans-serif;
+  color: rgb(14, 9, 0); /* Color del texto */
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column; /* Elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 10px; /* Espaciado entre elementos */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Espaciado entre los logos */
+  justify-content: center; /* Centra los logos */
+}
+
+.social-icons img {
+  width: 20px; /* TamaÃ±o pequeÃ±o de los logos */
+  height: auto; /* MantÃ©n la proporciÃ³n */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
+  transition: transform 0.3s; /* Suaviza el efecto hover */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Agranda ligeramente en hover */
+}
+
+.footer-column p {
+  margin: 0; /* Elimina los mÃ¡rgenes extra */
+  font-size: 12px; /* TamaÃ±o de texto mÃ¡s pequeÃ±o */
+}
+
+@media (width < 400px) {
+    .nav a {
+        font-size: 12px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    fieldset div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        max-width: 380px;
+    }
+
+    textarea {
+        resize: none;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f9ebc7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+
+    .submenu {
+        position: static;
+        padding-left: 20px;
+    }
+
+    .hamburger {
+        display: block; /* Muestra el icono hamburguesa en mÃ³vil */
+    }
+}

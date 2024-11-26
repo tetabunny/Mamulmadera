@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sen:wght@400..800&display=swap");
+
+body {
+    background-color: #eeeae1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Coloca header, main y footer en una columna */
+    min-height: 100vh; /* El body debe ocupar al menos el 100% de la altura de la ventana */
+    margin: 0;
+}
+
+main {
+  flex: 1; /* Se expande para llenar el espacio sobrante */
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: inherit;
+    font-family: "sen", sans-serif;
+    font-size: 15px;
+    font-weight:inherit;
+}
+
+.nav a {
+    color: #5c3c25;
+    font-family: "sen", sans-serif;
+    text-decoration: none;
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.navbar {
+    list-style-type: none; /* Quita las viÃ±etas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Elimina la decoraciÃ³n de los enlaces */
+.navbar a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Usa el color del texto del contenedor */
+    padding: 10px;
+    display: block; /* Para que los enlaces ocupen todo el espacio del li */
+}
+
+/* Estilo del submenÃº */
+.submenu {
+    list-style-type: none; /* Quita las viÃ±etas */
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #f9ebc7;
+    display: none; /* Oculta el submenÃº por defecto */
+    z-index: 10;
+}
+
+/* Muestra el submenÃº al hacer hover */
+.navbar li:hover .submenu {
+    display: block;
+}
+
+/* Estilos adicionales para la barra */
+.navbar li {
+    display: inline-block; /* Hace que los elementos de la lista estÃ©n en lÃ­nea */
+    position: relative;
+}
+
+.submenu li {
+    display: block; /* Para que los elementos del submenÃº estÃ©n en bloque */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 50px;
+    color: #5c3c25;
+    cursor: pointer;
+}
+
+.logo {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+   font-family: "sen", sans-serif;
+    text-decoration: none;
+    font-size: 40px;
+    margin-left: 80px; 
+    margin-bottom: 5px;
+    color: #C4661F
+  
+}
+
+#container-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10rem;
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(110, 72, 10);
+}
+
+.card {
+    color: #eeeae1;
+    background-color: #eeeae1;
+    height: 250px;
+    margin: 50px;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-family: "Sen", sans-serif;
+  color: rgb(14, 9, 0); /* Color del texto */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column; /* Elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 10px; /* Espaciado entre elementos */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Espaciado entre los logos */
+  justify-content: center; /* Centra los logos */
+}
+
+.social-icons img {
+  width: 20px; /* TamaÃ±o pequeÃ±o de los logos */
+  height: auto; /* MantÃ©n la proporciÃ³n */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el logo */
+  transition: transform 0.3s; /* Suaviza el efecto hover */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Agranda ligeramente en hover */
+}
+
+.footer-column p {
+  margin: 0; /* Elimina los mÃ¡rgenes extra */
+  font-size: 12px; /* TamaÃ±o de texto mÃ¡s pequeÃ±o */
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el cartel de informaciÃ³n que ocupa toda la card */
+.info-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5c3c25;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family:"Sen", sans-serif;
+    margin: 2px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Muestra el cartel al hacer hover */
+.card:hover .info-hover {
+    opacity: 1;
+}
+
+}
+.card-content {
+    padding: 16px;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "sen", sans-serif;
+    font-size: 20px;
+    color: #9b6f53;
+}
+
+@media (width < 400px) {
+    .nav a {
+        font-size: 12px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f9ebc7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+
+    .submenu {
+        position: static;
+        padding-left: 20px;
+    }
+
+    .hamburger {
+        display: block; /* Muestra el icono hamburguesa en mÃ³vil */
+    }
+
+}
